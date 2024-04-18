@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ian Calbreath</title>
+	<!-- Include self-hosted PDF.js library -->
+	<script src="https://iancalbreath.com/pdfjs-4.1.392-dist/build/pdf.min.js"></script>
+</head>
+
+<body>
+	<!-- PDF viewer container -->
+	<div id="pdf-viewer"></div>
+	
+	<!-- js to load PDF -->
+	<script>
+		// PDF.js load and display
+		const pdfViewer = document.getElementById('pdf-viewer');
+		const pdfUrl = 'https://iancalbreath.com/res/ICalbreathPro.pdf';
+		// Initialize PDF.js
+		pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+			pdf.getPage(1).then(page => {
+				const scale = 1.5;
+				const viewport = page.getViewport({ scale });
+				
+				// Prepare canvas using PDF.js
+				const canvas = document.createElement('canvas');
+				const context = canvas.getContext('2d');
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+				pdfViewer.appendChild(canvas);
+				
+				// Render PDF on canvasconst renderContext = {
+					canvasContext: context,
+					viewport: viewport
+				};
+				page.render(renderContext);
+			});
+		});
+	</script>
+</body>
+</html>
+	
+	
