@@ -6,28 +6,7 @@
     <title>Ian Calbreath</title>
     <!-- Include CDN link to PDF.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
-    <style>
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            margin-top: 20px;
-        }
-        .contact-icons a {
-            margin: 0 10px;
-        }
-
-        /* Responsive styles */
-        @media only screen and (max-width: 600px) {
-            .contact-icons {
-                flex-wrap: wrap;
-            }
-            .contact-icons a {
-                margin: 5px;
-                flex-basis: calc(50% - 20px); /* Two buttons per row on smaller screens */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -47,33 +26,7 @@
 
     <!-- PDF viewer container -->
     <div id="pdf-viewer"></div>
-    
-    <!-- js to load PDF -->
-    <script>
-        // PDF.js load and display
-        const pdfViewer = document.getElementById('pdf-viewer');
-        const pdfUrl = 'https://iancalbreath.com/ICalbreathPro.pdf';
-        // Initialize PDF.js
-        pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
-            pdf.getPage(1).then(page => {
-                const scale = 1.5;
-                const viewport = page.getViewport({ scale });
-                
-                // Prepare canvas using PDF.js
-                const canvas = document.createElement('canvas');
-                const context = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-                pdfViewer.appendChild(canvas);
-                
-                // Render PDF on canvas
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-                page.render(renderContext);
-            });
-        });
-    </script>
+    <!--js to load PDF. PDF.js load and display-->>
+    <script src="/js/pdfViewer.js"></script>
 </body>
 </html>
