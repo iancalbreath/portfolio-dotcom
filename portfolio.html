@@ -6,22 +6,32 @@
     <title>Ian Calbreath</title>
     <!-- Include CDN link to PDF.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+    <style>
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .contact-icons a {
+            margin: 0 10px;
+        }
+    </style>
 </head>
-
 <body>
-    
-    <!-- PDF viewer container test -->
-    <div id="pdf-viewer"></div>
 
     <!-- Image links for Gmail and GitHub -->
     <div class="contact-icons">
         <a href="mailto:calbreathian@gmail.com">
-            <img src="https://iancalbreath.com/gmail50.png" alt="Gmail Logo">
+            <img src="https://iancalbreath.com/gmail50.png" alt="Gmail Logo" style="width: 50px; height: 50px;">
         </a>
         <a href="https://github.com/iancalbreath" target="_blank">
-            <img src="https://iancalbreath.com/GitHub50.png" alt="GitHub Logo">
+            <img src="https://iancalbreath.com/GitHub50.png" alt="GitHub Logo" style="width: 50px; height: 50px;">
         </a>
     </div>
+
+    <!-- PDF viewer container -->
+    <div id="pdf-viewer"></div>
     
     <!-- js to load PDF -->
     <script>
