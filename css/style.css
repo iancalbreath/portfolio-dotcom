@@ -1,8 +1,13 @@
 .contact-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+.viewer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-icons a {
@@ -12,12 +17,15 @@
 /* Responsive styles */
 @media only screen and (max-width: 600px) {
     .contact-icons {
-        flex-wrap: wrap;
-    }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0px 20px 0px;
+        }
 
-    .contact-icons a {
-        margin: 5px;
-        flex-basis: calc(50% - 20px);
-        /* Two buttons per row on smaller screens */
+    .viewer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
