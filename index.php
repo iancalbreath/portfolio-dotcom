@@ -21,7 +21,7 @@
         if ($_GET["ruta"] == "default" || $_GET["ruta"] == "contact" || $_GET["ruta"] == "project") {
             include_once './componentWebsite/Page/' . $_GET["ruta"] . '.php';
         } else {
-            echo '404 Page not found';
+            echo '<h1 class="display-1 text-center">404 Page not found<h1>';
         }
     }
     ?>
