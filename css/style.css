@@ -22,3 +22,6 @@
         align-items: center;
         margin: 20px 0;
     }
+    .viewer {
+        transform: translateX(20px); /* Adjust the value as needed */
+    }
