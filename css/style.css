@@ -23,11 +23,8 @@
         margin: 20px 0;
     }
 
-    /* Increase specificity for .viewer to override conflicting styles */
-    body .viewer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 460px; /* Adjust as needed */
+    .viewer {
+        transform: translateX(100px); /* Adjust the value as needed */
     }
+
 }
