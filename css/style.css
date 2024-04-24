@@ -22,14 +22,11 @@
         align-items: center;
         margin: 20px 0;
     }
-
-/* Nav bar adjustments */
-.navbar-toggler {
-    order: -1; /* Moves the toggler to the left */
-    margin-right: 10px; /* Adds space between button and text */
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
+    .viewer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto; /* Center the viewer horizontally */
+        max-width: 100%; /* Make sure the PDF doesn't exceed the screen width */
+        height: auto; /* Allow the height to adjust based on the content */
+    }
