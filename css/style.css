@@ -14,22 +14,18 @@
     margin: 0 10px;
 }
 
-/* Responsive styles */
-@media only screen and (max-width: 600px) {
-    .contact-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-    }
+.viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 600px) {
     .viewer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto; /* Center the viewer horizontally */
-        max-width: 100%; /* Make sure the PDF doesn't exceed the screen width */
-        height: auto; /* Allow the height to adjust based on the content */
-        overflow: auto; /* Add overflow for scrolling if needed */
+        margin-left: 460px; /* Adjust this value as needed */
+        margin-right: 0; /* Optional: Adjust right margin if necessary */
+        width: calc(100% + 20px); /* Add margin to the width */
+        max-width: calc(100% + 20px); /* Add margin to the max-width */
     }
 }
