@@ -4,18 +4,14 @@
     margin: 20px 0;
 }
 
-.viewer-container {
+.viewer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10%;
-    margin-right: 10%; /* Adjust the right margin as needed */
-}
-
-.viewer {
     max-width: 100%;
     max-height: 100%;
     overflow: auto;
+    margin: 0 auto; /* Center the viewer horizontally */
 }
 
 /* Responsive styles */
@@ -24,7 +20,7 @@
         margin: 20px 0;
     }
 
-    .viewer-container {
-        margin-left: 35%; /* Adjust the left margin for mobile view */
+    .viewer {
+        width: 95%; /* Adjust the width to fit within the mobile screen */
     }
 }
