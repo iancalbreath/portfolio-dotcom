@@ -1,7 +1,7 @@
 .contact-icons {
     display: flex;
     justify-content: center;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0;
 }
 
 .viewer {
@@ -14,18 +14,20 @@
     margin: 0 10px;
 }
 
-.viewer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Responsive styles for mobile devices */
+/* Responsive styles */
 @media only screen and (max-width: 600px) {
-    .viewer {
-        margin-left: 460px; /* Adjust this value as needed */
-        margin-right: 0; /* Optional: Adjust right margin if necessary */
-        width: calc(100% + 20px); /* Add margin to the width */
-        max-width: calc(100% + 20px); /* Add margin to the max-width */
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    /* Increase specificity for .viewer to override conflicting styles */
+    body .viewer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 460px; /* Adjust as needed */
     }
 }
