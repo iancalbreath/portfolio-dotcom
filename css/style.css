@@ -22,11 +22,14 @@
         align-items: center;
         margin: 20px 0;
     }
+
     .viewer {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 460; /* Center the viewer horizontally */
+        margin: 0 auto; /* Center the viewer horizontally */
         max-width: 100%; /* Make sure the PDF doesn't exceed the screen width */
         height: auto; /* Allow the height to adjust based on the content */
+        overflow: auto; /* Add overflow for scrolling if needed */
     }
+}
