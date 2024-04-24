@@ -23,5 +23,5 @@
         margin: 20px 0;
     }
     .viewer {
-        transform: translateX(460px);
+        margin-left: 460px;
     }
