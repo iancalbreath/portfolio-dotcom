@@ -22,9 +22,3 @@
         align-items: center;
         margin: 20px 0;
     }
-
-    /* Adjust the PDF viewer position */
-    #pdf-viewer {
-        margin-left: 10px; /* Adjust as needed */
-    }
-}
