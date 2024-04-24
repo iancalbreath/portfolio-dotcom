@@ -23,10 +23,20 @@
         margin: 20px 0;
     }
 
-    .viewer {
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    /* Increase specificity for .viewer to override conflicting styles */
+    body .viewer {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 460px;
+        margin-left: 300px; /* Adjust as needed */
     }
 }
